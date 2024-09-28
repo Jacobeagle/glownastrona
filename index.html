@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -7,50 +6,12 @@
     <title>Jakub Puchała</title>
     <meta name="description" content="Grupa katolicka, która organizuje spotkania, gamingowe wieczory i wspiera duchowy rozwój. Dołącz do nas na Discordzie i YouTube.">
     <meta name="keywords" content="katolicyzm, chrześcijaństwo, duchowość, modlitwa, gaming, Discord, YouTube, wspólnota">
-    <meta name="google-site-verification" content="68xDz73qFL260nbPtPbmxOH782i5L5ibNY--a7YiqQY" />
-    <meta name="keywords" content="religia">
-    <meta name="keywords" content="wiara">
-    <meta name="keywords" content="grupa">
-    <meta name="keywords" content="komunikacja">
-    <meta name="keywords" content="wsparcie">
-    <meta name="keywords" content="spotkania">
-    <meta name="keywords" content="modlitwy">
-    <meta name="keywords" content="przyjaźń">
-    <meta name="keywords" content="siła">
-    <meta name="keywords" content="rozwój duchowy">
-    <meta name="keywords" content="przyłączenie się">
-    <meta name="keywords" content="katolickie inicjatywy">
-    <meta name="keywords" content="modlitwa wspólna">
-    <meta name="keywords" content="wspólne wydarzenia">
-    <meta name="keywords" content="organizacja">
-    <meta name="keywords" content="duchowość w grach">
-    <meta name="keywords" content="młodzież">
-    <meta name="keywords" content="wspólnota katolicka">
-    <meta name="keywords" content="wspólne modlitwy">
-    <meta name="keywords" content="zabawa">
-    <meta name="keywords" content="integracja">
-    <meta name="keywords" content="spotkania online">
-    <meta name="keywords" content="inicjatywy gamingowe">
-    <meta name="keywords" content="kultura katolicka">
-    <meta name="keywords" content="wspólne dyskusje">
-    <meta name="keywords" content="młodzieżowa wspólnota">
-    <meta name="keywords" content="budowanie relacji">
-    <meta name="keywords" content="katolicyzm online">
-    <meta name="keywords" content="informacje">
-    <meta name="keywords" content="aktualności">
-    <meta name="keywords" content="duchowe wzrastanie">
-    <meta name="keywords" content="komunikacja online">
-    <meta name="keywords" content="grupa przyjaciół">
-    <meta name="keywords" content="społeczność">
-    <meta name="keywords" content="wspólne granie">
-    <meta name="keywords" content="dzielenie się doświadczeniami">
-    <meta name="keywords" content="wartości katolickie">
-    <meta name="keywords" content="dzielenie się wiarą">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
+        /* Twoje dotychczasowe style */
         * {
             margin: 0;
             padding: 0;
@@ -64,26 +25,34 @@
             overflow-x: hidden;
         }
 
-        /* Animowane tło */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(46, 52, 64, 0.8), rgba(76, 86, 106, 0.8));
-            z-index: -1;
-            filter: blur(10px);
-            animation: gradientBackground 10s ease infinite;
+        /* Google Translate */
+        #google_translate_element select {
+            background-color: #FFD700;
+            color: #000;
+            border: none;
+            border-radius: 50px;
+            padding: 10px;
+            margin: 10px;
+            font-size: 1.2em;
+            font-family: 'Roboto', sans-serif;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
         }
 
-        @keyframes gradientBackground {
-            0% {background-position: 0 0;}
-            50% {background-position: 100% 100%;}
-            100% {background-position: 0 0;}
+        #google_translate_element select:hover {
+            transform: translateY(-5px) scale(1.1);
+            background-color: #FFA500;
         }
 
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+        }
+
+        body {
+            top: 0px !important;
+        }
+
+        /* Stylowanie reszty strony */
         header {
             display: flex;
             justify-content: space-between;
@@ -205,12 +174,6 @@
             width: 24px;
         }
 
-        @keyframes pulse {
-            0% {transform: scale(1);}
-            50% {transform: scale(1.05);}
-            100% {transform: scale(1);}
-        }
-
         footer {
             background: #2e3440;
             color: #FFFFFF;
@@ -227,40 +190,30 @@
 
     </style>
 
-    <script>
-        window.onscroll = function() {
-            const header = document.querySelector('header');
-            if (window.pageYOffset > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        };
-    </script>
-</head>
-
-<body>
-    <!-- Google Translate Widget -->
-    <div id="google_translate_element"></div>
-
     <!-- Skrypt Google Translate -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
-                pageLanguage: 'pl', // Język domyślny (polski)
-                includedLanguages: 'en,es,de,fr,ru', // Lista dostępnych języków
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                pageLanguage: 'pl',
+                includedLanguages: 'en,es,de,fr,ru',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
             }, 'google_translate_element');
         }
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</head>
+
+<body>
     <header>
-        
         <nav>
             <a href="#about">O nas</a>
             <a href="#Inne strony">Inne strony</a>
             <a href="#Kontakt">Kontakt</a>
-            <a href="#Social-media">Social-media</a>       
+            <a href="#Social-media">Social-media</a>
+            <!-- Google Translate Selector -->
+            <div id="google_translate_element"></div>
         </nav>
     </header>
 
@@ -270,12 +223,12 @@
         <p>Znajdziesz tutaj różne informacje, moje strony internetowe i inne!</p>
     </section>
 
-        <section id="Inne strony">
+    <section id="Inne strony">
         <h2>Inne strony</h2>
-            <a href="https://jacobeagle.github.io/swiencislonzocy/" class="button">
-                <img src="https://i.imgur.com/OIrjMHF.png" alt="świenci Ślonzocy"> świenci Ślonzocy</a>
-                <a href="https://bit.ly/krzewzycia" class="button">
-                    <img src="https://jacobeagle.github.io/krzew-zycia/logo.png" alt="Krzew Życia">Krzew Życia</a>
+        <a href="https://jacobeagle.github.io/swiencislonzocy/" class="button">
+            <img src="https://i.imgur.com/OIrjMHF.png" alt="świenci Ślonzocy"> świenci Ślonzocy</a>
+        <a href="https://bit.ly/krzewzycia" class="button">
+            <img src="https://jacobeagle.github.io/krzew-zycia/logo.png" alt="Krzew Życia">Krzew Życia</a>
     </section>
 
     <section id="Kontakt">
