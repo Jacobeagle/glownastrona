@@ -6,8 +6,7 @@
     <title>Jakub Puchała</title>
     <meta name="description" content="Grupa katolicka, która organizuje spotkania, gamingowe wieczory i wspiera duchowy rozwój. Dołącz do nas na Discordzie i YouTube.">
     <meta name="keywords" content="katolicyzm, chrześcijaństwo, duchowość, modlitwa, gaming, Discord, YouTube, wspólnota">
-    <meta name="google-site-verification" content="68xDz73qFL260nbPtPbmxOH782i5L5ibNY--a7YiqQY" />
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
@@ -40,6 +39,11 @@
             transition: transform 0.3s, background-color 0.3s;
         }
 
+        #google_translate_element select:hover {
+            transform: translateY(-5px) scale(1.1);
+            background-color: #FFA500;
+        }
+
         /* Ukrywanie paska tłumaczenia */
         .goog-te-banner-frame.skiptranslate,
         .goog-te-banner-frame {
@@ -65,7 +69,6 @@
             width: 100%;
             z-index: 1000;
             transition: background 0.5s, transform 0.5s ease;
-            animation: slideDown 1s ease-in-out;
         }
 
         nav a {
@@ -84,7 +87,6 @@
         section {
             text-align: center;
             padding: 100px 20px;
-            animation: fadeIn 1.5s ease;
         }
 
         h1, h2 {
@@ -112,40 +114,37 @@
             line-height: 1.6;
         }
 
-        /* Animacje fade-in i fade-in-up */
-        @keyframes fadeIn {
-            0% {opacity: 0;}
-            100% {opacity: 1;}
-        }
-
-        .button {
-            display: inline-flex;
-            align-items: center;
-            padding: 15px 30px;
-            margin: 30px;
-            background: #FFD700;
-            color: #000000;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: transform 0.3s, background-color 0.3s, box-shadow 0.5s ease;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .button:hover {
-            transform: translateY(-5px) scale(1.1);
-            background-color: #FFA500;
-        }
-
         footer {
             background: #2e3440;
             color: #FFFFFF;
             padding: 20px;
             text-align: center;
             font-size: 0.9em;
-            animation: fadeIn 2s ease;
+        }
+
+        /* Stylowanie linków do języków */
+        .language-link {
+            background-color: #FFD700;
+            color: #000;
+            border: none;
+            border-radius: 50px;
+            padding: 10px;
+            margin: 10px;
+            font-size: 1.2em;
+            font-family: 'Roboto', sans-serif;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .language-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            background-color: #FFA500;
+        }
+
+        /* Animacja smooth scroll */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -157,13 +156,13 @@
             <a href="#Inne strony">Inne strony</a>
             <a href="#Kontakt">Kontakt</a>
             <a href="#Social-media">Social-media</a>
-            <a class="language-link" href="?lang=pl">PL</a>
-            <a class="language-link" href="?lang=en">EN</a>
-            <a class="language-link" href="?lang=es">ES</a>
-            <a class="language-link" href="?lang=de">DE</a>
-            <a class="language-link" href="?lang=fr">FR</a>
-            <a class="language-link" href="?lang=ru">RU</a>
-            <button class="button" id="translateButton">Przetłumacz stronę</button>
+            <!-- Linki do wyboru języka -->
+            <a class="language-link" href="#" onclick="changeLanguage('pl')">PL</a>
+            <a class="language-link" href="#" onclick="changeLanguage('en')">EN</a>
+            <a class="language-link" href="#" onclick="changeLanguage('es')">ES</a>
+            <a class="language-link" href="#" onclick="changeLanguage('de')">DE</a>
+            <a class="language-link" href="#" onclick="changeLanguage('fr')">FR</a>
+            <a class="language-link" href="#" onclick="changeLanguage('ru')">RU</a>
         </nav>
     </header>
 
@@ -208,13 +207,14 @@
             }, 'google_translate_element');
         }
 
-        document.getElementById('translateButton').addEventListener('click', function() {
-            var lang = prompt("Wprowadź kod języka (np. 'en' dla angielskiego):");
-            if (lang) {
-                window.location.href = window.location.pathname + '?lang=' + lang;
-            }
-        });
+        function changeLanguage(lang) {
+            var element = document.createElement('script');
+            element.src = `//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit`;
+            document.body.appendChild(element);
+            document.querySelector('#google_translate_element select').value = lang;
+            document.querySelector('#google_translate_element select').dispatchEvent(new Event('change'));
+        }
     </script>
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <div id="google_translate_element"></div>
 </body>
 </html>
