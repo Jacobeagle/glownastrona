@@ -228,26 +228,29 @@
             animation: fadeIn 2s ease;
         }
 
+        /* Stylowanie przycisków językowych */
+        .language-button {
+            background-color: #FFD700;
+            color: #000;
+            border: none;
+            border-radius: 50px;
+            padding: 10px;
+            margin: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .language-button:hover {
+            transform: translateY(-5px) scale(1.1);
+            background-color: #FFA500;
+        }
+
         /* Animacja smooth scroll */
         html {
             scroll-behavior: smooth;
         }
-
     </style>
-
-    <!-- Skrypt Google Translate -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'pl',
-                includedLanguages: 'pl,en,es,de,fr,ru',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 </head>
 
 <body>
@@ -257,8 +260,13 @@
             <a href="#Inne strony">Inne strony</a>
             <a href="#Kontakt">Kontakt</a>
             <a href="#Social-media">Social-media</a>
-            <!-- Google Translate Selector -->
-            <div id="google_translate_element"></div>
+            <!-- Własne przyciski do wyboru języka -->
+            <button class="language-button" onclick="changeLanguage('pl')">PL</button>
+            <button class="language-button" onclick="changeLanguage('en')">EN</button>
+            <button class="language-button" onclick="changeLanguage('es')">ES</button>
+            <button class="language-button" onclick="changeLanguage('de')">DE</button>
+            <button class="language-button" onclick="changeLanguage('fr')">FR</button>
+            <button class="language-button" onclick="changeLanguage('ru')">RU</button>
         </nav>
     </header>
 
@@ -291,17 +299,24 @@
     <footer>
         &copy; 2024 Jakub Puchała. Strona została zahostowana za pomocą GitHub: <a href="https://github.com/Jacobeagle/swiencislonzocy">Repozytorium</a>
     </footer>
+
     <!-- Skrypt Google Translate -->
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'pl',
-            includedLanguages: 'pl,en,es,de,fr,ru',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
-        }, 'google_translate_element');
-    }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pl',
+                includedLanguages: 'pl,en,es,de,fr,ru',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function changeLanguage(lang) {
+            var googleTranslateElement = new google.translate.TranslateElement();
+            googleTranslateElement.getInstance().setEnabled(true);
+            googleTranslateElement.getInstance().setLanguage(lang);
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
