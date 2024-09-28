@@ -7,45 +7,7 @@
     <meta name="description" content="Grupa katolicka, która organizuje spotkania, gamingowe wieczory i wspiera duchowy rozwój. Dołącz do nas na Discordzie i YouTube.">
     <meta name="keywords" content="katolicyzm, chrześcijaństwo, duchowość, modlitwa, gaming, Discord, YouTube, wspólnota">
     <meta name="google-site-verification" content="68xDz73qFL260nbPtPbmxOH782i5L5ibNY--a7YiqQY" />
-    <meta name="keywords" content="religia">
-    <meta name="keywords" content="wiara">
-    <meta name="keywords" content="grupa">
-    <meta name="keywords" content="komunikacja">
-    <meta name="keywords" content="wsparcie">
-    <meta name="keywords" content="spotkania">
-    <meta name="keywords" content="modlitwy">
-    <meta name="keywords" content="przyjaźń">
-    <meta name="keywords" content="siła">
-    <meta name="keywords" content="rozwój duchowy">
-    <meta name="keywords" content="przyłączenie się">
-    <meta name="keywords" content="katolickie inicjatywy">
-    <meta name="keywords" content="modlitwa wspólna">
-    <meta name="keywords" content="wspólne wydarzenia">
-    <meta name="keywords" content="organizacja">
-    <meta name="keywords" content="duchowość w grach">
-    <meta name="keywords" content="młodzież">
-    <meta name="keywords" content="wspólnota katolicka">
-    <meta name="keywords" content="wspólne modlitwy">
-    <meta name="keywords" content="zabawa">
-    <meta name="keywords" content="integracja">
-    <meta name="keywords" content="spotkania online">
-    <meta name="keywords" content="inicjatywy gamingowe">
-    <meta name="keywords" content="kultura katolicka">
-    <meta name="keywords" content="wspólne dyskusje">
-    <meta name="keywords" content="młodzieżowa wspólnota">
-    <meta name="keywords" content="budowanie relacji">
-    <meta name="keywords" content="katolicyzm online">
-    <meta name="keywords" content="informacje">
-    <meta name="keywords" content="aktualności">
-    <meta name="keywords" content="duchowe wzrastanie">
-    <meta name="keywords" content="komunikacja online">
-    <meta name="keywords" content="grupa przyjaciół">
-    <meta name="keywords" content="społeczność">
-    <meta name="keywords" content="wspólne granie">
-    <meta name="keywords" content="dzielenie się doświadczeniami">
-    <meta name="keywords" content="wartości katolickie">
-    <meta name="keywords" content="dzielenie się wiarą">
-
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
@@ -108,16 +70,6 @@
             width: 100%;
             z-index: 1000;
             transition: background 0.5s, transform 0.5s ease;
-            animation: slideDown 1s ease-in-out;
-        }
-
-        header img {
-            width: 120px;
-            transition: transform 0.5s ease;
-        }
-
-        header img:hover {
-            transform: rotate(360deg);
         }
 
         nav a {
@@ -133,14 +85,9 @@
             transform: scale(1.1);
         }
 
-        header.scrolled {
-            background: rgba(0, 0, 0, 0.8);
-        }
-
         section {
             text-align: center;
             padding: 100px 20px;
-            animation: fadeIn 1.5s ease;
         }
 
         h1, h2 {
@@ -148,20 +95,16 @@
             letter-spacing: 2px;
             font-weight: 700;
             margin-bottom: 20px;
-            opacity: 0;
-            animation: fadeInUp 1s ease forwards;
         }
 
         h1 {
             font-size: 3em;
             color: #FFD700;
-            animation-delay: 0.2s;
         }
 
         h2 {
             font-size: 2em;
             color: #FFFFFF;
-            animation-delay: 0.4s;
         }
 
         p {
@@ -170,25 +113,6 @@
             color: #eaeaea;
             font-size: 1.1em;
             line-height: 1.6;
-            opacity: 0;
-            animation: fadeIn 2s ease forwards;
-            animation-delay: 0.6s;
-        }
-
-        /* Animacje fade-in i fade-in-up */
-        @keyframes fadeIn {
-            0% {opacity: 0;}
-            100% {opacity: 1;}
-        }
-
-        @keyframes fadeInUp {
-            0% {opacity: 0; transform: translateY(30px);}
-            100% {opacity: 1; transform: translateY(0);}
-        }
-
-        @keyframes slideDown {
-            0% {transform: translateY(-100%);}
-            100% {transform: translateY(0);}
         }
 
         .button {
@@ -205,18 +129,11 @@
             text-decoration: none;
             transition: transform 0.3s, background-color 0.3s, box-shadow 0.5s ease;
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-            animation: pulse 2s infinite;
         }
 
         .button:hover {
             transform: translateY(-5px) scale(1.1);
             background-color: #FFA500;
-            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.4);
-        }
-
-        .button img {
-            margin-right: 15px;
-            width: 24px;
         }
 
         footer {
@@ -225,7 +142,6 @@
             padding: 20px;
             text-align: center;
             font-size: 0.9em;
-            animation: fadeIn 2s ease;
         }
 
         /* Stylowanie linków do języków */
@@ -269,6 +185,7 @@
             <a class="language-link" href="?lang=de">DE</a>
             <a class="language-link" href="?lang=fr">FR</a>
             <a class="language-link" href="?lang=ru">RU</a>
+            <a class="language-link" href="?lang=uk">UK</a> <!-- Link do języka ukraińskiego -->
         </nav>
     </header>
 
@@ -303,16 +220,17 @@
     </footer>
 
     <!-- Skrypt Google Translate -->
+    <div id="google_translate_element"></div>
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'pl',
-                includedLanguages: 'pl,en,es,de,fr,ru',
+                includedLanguages: 'pl,en,es,de,fr,ru,uk', // Dodany język ukraiński
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
                 autoDisplay: false
             }, 'google_translate_element');
         }
     </script>
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
