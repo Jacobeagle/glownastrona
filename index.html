@@ -5,47 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jakub Puchała</title>
     <meta name="description" content="Grupa katolicka, która organizuje spotkania, gamingowe wieczory i wspiera duchowy rozwój. Dołącz do nas na Discordzie i YouTube.">
-    <meta name="keywords" content="katolicyzm, chrześcijaństwo, duchowość, modlitwa, gaming, Discord, YouTube, wspólnota">
-    <meta name="google-site-verification" content="68xDz73qFL260nbPtPbmxOH782i5L5ibNY--a7YiqQY" />
-    <meta name="keywords" content="religia">
-    <meta name="keywords" content="wiara">
-    <meta name="keywords" content="grupa">
-    <meta name="keywords" content="komunikacja">
-    <meta name="keywords" content="wsparcie">
-    <meta name="keywords" content="spotkania">
-    <meta name="keywords" content="modlitwy">
-    <meta name="keywords" content="przyjaźń">
-    <meta name="keywords" content="siła">
-    <meta name="keywords" content="rozwój duchowy">
-    <meta name="keywords" content="przyłączenie się">
-    <meta name="keywords" content="katolickie inicjatywy">
-    <meta name="keywords" content="modlitwa wspólna">
-    <meta name="keywords" content="wspólne wydarzenia">
-    <meta name="keywords" content="organizacja">
-    <meta name="keywords" content="duchowość w grach">
-    <meta name="keywords" content="młodzież">
-    <meta name="keywords" content="wspólnota katolicka">
-    <meta name="keywords" content="wspólne modlitwy">
-    <meta name="keywords" content="zabawa">
-    <meta name="keywords" content="integracja">
-    <meta name="keywords" content="spotkania online">
-    <meta name="keywords" content="inicjatywy gamingowe">
-    <meta name="keywords" content="kultura katolicka">
-    <meta name="keywords" content="wspólne dyskusje">
-    <meta name="keywords" content="młodzieżowa wspólnota">
-    <meta name="keywords" content="budowanie relacji">
-    <meta name="keywords" content="katolicyzm online">
-    <meta name="keywords" content="informacje">
-    <meta name="keywords" content="aktualności">
-    <meta name="keywords" content="duchowe wzrastanie">
-    <meta name="keywords" content="komunikacja online">
-    <meta name="keywords" content="grupa przyjaciół">
-    <meta name="keywords" content="społeczność">
-    <meta name="keywords" content="wspólne granie">
-    <meta name="keywords" content="dzielenie się doświadczeniami">
-    <meta name="keywords" content="wartości katolickie">
-    <meta name="keywords" content="dzielenie się wiarą">
-
+    <meta name="keywords" content="katolicyzm, chrześcijaństwo, duchowość, modlitwa, gaming, Discord, YouTube, wspólnota, religia, wiara, grupa, komunikacja, wsparcie, spotkania, modlitwy, przyjaźń, siła, rozwój duchowy, przyłączenie się, katolickie inicjatywy, modlitwa wspólna, wspólne wydarzenia, organizacja, duchowość w grach, młodzież, wspólnota katolicka, wspólne modlitwy, zabawa, integracja, spotkania online, inicjatywy gamingowe, kultura katolicka, wspólne dyskusje, młodzieżowa wspólnota, budowanie relacji, katolicyzm online, informacje, aktualności, duchowe wzrastanie, komunikacja online, grupa przyjaciół, społeczność, wspólne granie, dzielenie się doświadczeniami, wartości katolickie, dzielenie się wiarą">
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
@@ -203,116 +164,89 @@
             border-radius: 50px;
             cursor: pointer;
             text-decoration: none;
-            transition: transform 0.3s, background-color 0.3s, box-shadow 0.5s ease;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-            animation: pulse 2s infinite;
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.5s;
         }
 
         .button:hover {
-            transform: translateY(-5px) scale(1.1);
-            background-color: #FFA500;
-            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.4);
-        }
-
-        .button img {
-            margin-right: 15px;
-            width: 24px;
+            background: #FFA500;
+            transform: translateY(-5px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
         }
 
         footer {
-            background: #2e3440;
-            color: #FFFFFF;
-            padding: 20px;
             text-align: center;
-            font-size: 0.9em;
-            animation: fadeIn 2s ease;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.5);
         }
 
-        /* Stylowanie linków do języków */
-        .language-link {
-            background-color: #FFD700;
-            color: #000;
-            border: none;
-            border-radius: 50px;
-            padding: 10px;
-            margin: 10px;
-            font-size: 1.2em;
-            font-family: 'Roboto', sans-serif;
-            cursor: pointer;
-            text-decoration: none;
-            transition: transform 0.3s, background-color 0.3s;
+        footer p {
+            color: #eaeaea;
+            font-size: 1em;
         }
 
-        .language-link:hover {
-            transform: translateY(-5px) scale(1.1);
-            background-color: #FFA500;
-        }
+        /* Responsywność */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
-        /* Animacja smooth scroll */
-        html {
-            scroll-behavior: smooth;
+            nav a {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
-
 <body>
     <header>
+        <img src="logo.png" alt="Logo">
         <nav>
-            <a href="#about">O nas</a>
-            <a href="#Inne strony">Inne strony</a>
-            <a href="#Kontakt">Kontakt</a>
-            <a href="#Social-media">Social-media</a>
-            <!-- Linki do wyboru języka -->
-            <a class="language-link" href="?lang=pl">PL</a>
-            <a class="language-link" href="?lang=en">EN</a>
-            <a class="language-link" href="?lang=es">ES</a>
-            <a class="language-link" href="?lang=de">DE</a>
-            <a class="language-link" href="?lang=fr">FR</a>
-            <a class="language-link" href="?lang=ru">RU</a>
+            <a href="#o-nas">O nas</a>
+            <a href="#inne-strony">Inne strony</a>
+            <a href="#social-media">Social-media</a>
         </nav>
     </header>
 
-    <section id="about">
-        <h1>Witamy na głównej stronie Jakuba Puchały!</h1>
-        <h2>Co tutaj znajdziesz?</h2>
-        <p>Znajdziesz tutaj różne informacje, moje strony internetowe i inne!</p>
+    <section id="o-nas">
+        <h1>Witamy!</h1>
+        <p>Jesteśmy grupą katolicką, która organizuje spotkania, gamingowe wieczory i wspiera duchowy rozwój. Dołącz do nas na Discordzie i YouTube.</p>
+        <a href="https://discord.gg/your-invite-code" class="button">Dołącz do nas na Discordzie</a>
     </section>
 
-    <section id="Inne strony">
+    <section id="inne-strony">
         <h2>Inne strony</h2>
-        <a href="https://jacobeagle.github.io/swiencislonzocy/" class="button">
-            <img src="https://i.imgur.com/OIrjMHF.png" alt="świenci Ślonzocy"> świenci Ślonzocy</a>
-        <a href="https://bit.ly/krzewzycia" class="button">
-            <img src="https://jacobeagle.github.io/krzew-zycia/logo.png" alt="Krzew Życia">Krzew Życia</a>
+        <p>Odwiedź nasze inne strony, aby dowiedzieć się więcej o naszej działalności i wartościach.</p>
     </section>
 
-    <section id="Kontakt">
-        <h2>Kontakt</h2>
-        <a href="https://bit.ly/jakubp" class="button"><img src="https://www.svgrepo.com/show/64208/phone.svg"> Nie podaję</a>
-        <a href="mailto:kubaszek10puchacz@gmail.com" class="button"><img src="https://cdn-icons-png.flaticon.com/256/646/646094.png">E-mail </a>
-    </section>
-
-    <section id="Social-media">
-        <h2>Moje media społecznościowe</h2>
-        <p>Tutaj znajdziesz moje social-media takie jak youtube, instagram itd.</p>
-        <a href="https://www.youtube.com/@L1ghtStr1k3" class="button"><img src="https://cdn-icons-png.flaticon.com/256/733/733590.png"> youtube</a>
+    <section id="social-media">
+        <h2>Social-media</h2>
+        <p>Śledź nas na naszych platformach społecznościowych, aby być na bieżąco z wydarzeniami.</p>
     </section>
 
     <footer>
-        &copy; 2024 Jakub Puchała. Strona została zahostowana za pomocą GitHub: <a href="https://github.com/Jacobeagle/swiencislonzocy">Repozytorium</a>
+        <p>&copy; 2024 Jakub Puchała. Wszystkie prawa zastrzeżone.</p>
     </footer>
 
-    <!-- Skrypt Google Translate -->
+    <div id="google_translate_element"></div>
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'pl',
-                includedLanguages: 'pl,en,es,de,fr,ru',
+                includedLanguages: 'en,pl',
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
                 autoDisplay: false
             }, 'google_translate_element');
         }
     </script>
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
