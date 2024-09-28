@@ -83,12 +83,18 @@
             background-color: #FFA500;
         }
 
-        .goog-te-banner-frame.skiptranslate {
+        /* Ukrywanie paska tłumaczenia */
+        .goog-te-banner-frame.skiptranslate,
+        .goog-te-banner-frame {
             display: none !important;
         }
 
+        .goog-te-gadget {
+            display: inline-block;
+        }
+
         body {
-            top: 0px !important;
+            top: 0 !important;
         }
 
         /* Stylowanie reszty strony */
@@ -234,7 +240,7 @@
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'pl',
-                includedLanguages: 'en,es,de,fr,ru',
+                includedLanguages: 'pl,en,es,de,fr,ru',
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
                 autoDisplay: false
             }, 'google_translate_element');
@@ -273,16 +279,17 @@
     <section id="Kontakt">
         <h2>Kontakt</h2>
         <a href="https://bit.ly/jakubp" class="button"><img src="https://www.svgrepo.com/show/64208/phone.svg"> Nie podaję</a>
-        <a href="mailto:kubaszek10puchacz@gmail.com" class="button"><img src="https://cdn-icons-png.flaticon.com/256/646/646094.png">e-mail </a>
+        <a href="mailto:kubaszek10puchacz@gmail.com" class="button"><img src="https://cdn-icons-png.flaticon.com/256/646/646094.png">E-mail </a>
     </section>
 
     <section id="Social-media">
-        <h2>Social-media</h2>
-        <a href="https://www.youtube.com/@L1ghtStr1k3" class="button"><img src="https://www.svgrepo.com/download/13671/youtube.svg">Kanał youtube</a>
+        <h2>Moje media społecznościowe</h2>
+        <p>Na poniższych stronach znajdziesz różne treści dotyczące mojego życia oraz duchowości.</p>
+        <a href="https://bit.ly/JakubYT" class="button"><img src="https://cdn-icons-png.flaticon.com/256/733/733590.png"> youtube</a>
     </section>
 
     <footer>
-        &copy; 2024 Jakub Puchała. Strona została zahostowana za pomocą GitHub: <a href="https://github.com/Jacobeagle/swiencislonzocy">Repozytorium </a>
+        &copy; 2024 Jakub Puchała. Strona została zahostowana za pomocą GitHub: <a href="https://github.com/Jacobeagle/swiencislonzocy">Repozytorium</a>
     </footer>
 </body>
 </html>
