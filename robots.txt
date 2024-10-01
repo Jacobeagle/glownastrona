@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://jacobeagle.github.io/glownastrona/sitemap.xml
